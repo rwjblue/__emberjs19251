@@ -1,0 +1,19 @@
+<article class="page">
+	{{#if @page.title}}
+		<header class="page-header">
+			<h2 class="page-title">{{{@page.title}}}</h2>
+		</header>
+	{{/if}}
+	{{#if @page.content.length}}
+		<section class="page-content">
+			{{{@page.content}}}
+		</section>
+	{{else}}
+		<dialog role="alertdialog" aria-label="No content found for this page 🐸">
+			<h3>No content found here 🦗🦗</h3>
+			<p>Head back <LinkTo @route="index">home 🏠</LinkTo></p>
+		</dialog>
+	{{/if}}
+</article>
+
+{{yield}}
